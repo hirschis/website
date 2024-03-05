@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Arial";
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../font/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Comicbold";
+    src: url("../font/ComicNeue-Bold.ttf");
+}
+
+div{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.topnav {
+    position: fixed;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    padding: 0 50px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    color: black;
+    text-align: center;
+    padding: 0%;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: rgb(255, 202, 41);
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+.navleft{
+    float: left;
+}
+
+.navright{
+    float: right;
+}
+
+#Contact{
+    padding-left: 20px;
+}
+
+#Main{
+    padding-right: 20px;
+}
+
+.icon{
+    display: none;
+    position: fixed;
+    top: 20px;
+    font-size: 12px;
+    right: 10.5%;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.icon:hover{
+    color: rgb(255, 202, 41);
+}
+
+.mobilenav{
+    box-sizing: border-box;
+    display: none;
+    position: fixed;
+    justify-content: start;
+    align-items: end;
+    padding-right: 10.5%;
+    padding-top: 100px;
+    flex-direction: column;
+    top: 0px;
+    font-size: 12px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    translate: 0 -1000px;
+    transition: translate 0.3s ease;
+    z-index: 99;
+}
+
+.mobilenav a:hover{
+    color: rgb(255, 202, 41);
+}
+
+.mobilenav.show{
+    translate: 0 0;
+}
+
+.mobilenav a{
+    padding: 2vh 0vh;
+}
+
+.containername{
+    display: flex;
+    float: left;
+}
+
+.name{
+    position: fixed;
+    left: 50vw;
+    top: 20px;
+    translate: -50% 0%;
+    z-index: 100;
+    display: block;
+    color: black;
+    font-size: 12px;
+}
+
+.name:hover {
+    font-family: Comicbold;
+}
+
+.searchicon{
+    display: block;
+    
+    vertical-align: middle;
+}
+   
+.bildbeschreibung{
+    text-align: center;
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    translate: -50% 0%;
+    font-size: 8px;
+}
+
+.DatImpAGB{
+    text-align: center;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    bottom: 15px;
+    left: 50%;
+    translate: -50% 0%;
+    font-size: 6px;
+}
+
+.DatImpAGB a:hover{
+    color: rgb(255, 202, 41);
+}
+
+.pictures img{
+    display: none;
+    translate: -50% -50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-width: 40%;
+    max-height: 60%;
+}
+
+@media screen and (max-width:900px){
+
+}
+
+@media screen and (max-width:600px){
+    .topnav{
+        display: none;
+    }
+    
+    .icon{
+        display: block;
+    }
+    
+    .mobilenav{
+        display: flex;
+    }
+    
+    .pictures img{
+        max-width: 80%;
+        max-height: 80%;
+    }
+
+    .DatImpAGB{
+        display: none;
+    }
+
+    .bildbeschreibung{
+        bottom: 10px;
+    }
+
+    @media screen and (max-height:400px){
+        .pictures img{
+            max-height: 40%;
+    }
+    }
+
+}

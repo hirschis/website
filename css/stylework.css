@@ -1,0 +1,328 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Arial";
+    font-style: normal;
+    scroll-behavior: smooth;
+}
+
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../font/Poppins-Regular.ttf");
+}
+@font-face {
+    font-family: "Comicbold";
+    src: url("../font/ComicNeue-Bold.ttf");
+}
+
+div{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.topnav {
+    position: fixed;
+    left: 50%;
+    translate: -50% 0%;
+    width: 100%;
+    top: 20px;
+    padding: 0 20px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: rgb(255, 202, 41);
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+.navleft{
+    float: left;
+}
+
+.navright{
+    float: right;
+}
+
+#Contact{
+    padding-left: 20px;
+}
+
+#Main{
+    padding-right: 20px;
+}
+
+.icon{
+    display: none;
+    position: fixed;
+    top: 20px;
+    font-size: 12px;
+    right: 10.5%;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.icon:hover{
+    color: rgb(255, 202, 41);
+}
+
+.mobilenav{
+    box-sizing: border-box;
+    display: none;
+    position: fixed;
+    justify-content: start;
+    align-items: end;
+    padding-right: 10.5%;
+    padding-top: 100px;
+    flex-direction: column;
+    top: 0px;
+    font-size: 12px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    translate: 0 -1000px;
+    transition: translate 0.3s ease;
+    z-index: 99;
+}
+
+.mobilenav a:hover{
+    color: rgb(255, 202, 41);
+}
+
+.mobilenav.show{
+    translate: 0 0;
+}
+
+.mobilenav a{
+    padding: 2vh 0vh;
+}
+
+.containername{
+    display: flex;
+    float: left;
+}
+
+.name{
+    position: fixed;
+    left: 50vw;
+    top: 20px;
+    translate: -50% 0%;
+    z-index: 100;
+    display: block;
+    color: black;
+    font-size: 12px;
+}
+
+.name{
+    display: block;
+    color: black;
+    font-size: 12px;
+}
+
+.name:hover {
+    font-family: Comicbold;
+}
+
+
+
+.searchicon{
+    display: block;
+    
+    vertical-align: middle;
+}
+
+.inhaltraster{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 0px;
+}
+
+/* .inhaltraster:hover {
+    background-color: rgb(239, 239, 239);
+} */
+
+.inhaltraster:hover > .vorschau{
+    width: 90%;
+    transition: all .1s ease;
+}
+
+#raster1 {
+    margin-top: 100px;
+}
+
+.projectgroup{
+    font-weight: 600;
+    color: black;
+    display: block;
+    grid-column: 1 / span 2;   
+    padding-top: 25%;
+    padding-left: 20%;
+    padding-bottom: 15%;
+ }
+
+
+.projecttitle{
+    color: black;
+    font-size: 12px;
+    display: block;
+    grid-column: 1 / span 2;   
+    padding-left: 20px;
+}
+
+.text{
+    color: black;
+    font-size: 10px;
+    display: block;
+    grid-column: 3 / span 3;
+    padding-left: 5%;
+}
+
+.year{
+    color: black;
+    grid-column: 7 / span 2;
+    font-size: 10px;
+}
+
+.text:hover{
+    font-style: italic;
+}
+
+.vorschau{
+    grid-column: 9 / span 2;
+    height: auto;
+    width: 60%;
+    justify-self: right;
+    transition: all 100ms ease;
+}
+
+.bildbeschreibung{
+    margin-top: 5%;
+    margin-bottom: 30px;
+    text-align: center;
+    left: 50%;
+    font-size: 8px;
+}
+
+.DatImpAGB{
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    bottom: 15px;
+    left: 50%;
+    translate: -50% 0%;
+    font-size: 6px;
+}
+
+.DatImpAGB a:hover{
+    color: rgb(255, 202, 41);
+}
+
+@media screen and (max-width:900px){
+    .inhaltraster{
+        grid-template-columns: repeat(8, 1fr);
+    }
+    .vorschau{
+        grid-column: 7 / span 2;
+        height: auto;
+        width: 80%;
+    }
+
+    .inhaltraster:hover > .vorschau{
+        width: 100%;
+    }
+
+    .text{
+        grid-column: 3 / span 4;
+    }
+    .year{
+        display: none;
+        }
+}
+
+
+@media screen and (max-width:600px){
+
+    .inhaltraster{
+        grid-template-columns: repeat(10, 1fr);
+    }
+
+
+.inhaltraster{
+    min-width: 0px;
+    padding-bottom: 30px;
+}
+.projecttitle{
+    color: black;
+    font-size: 12px;
+    display: block;
+    grid-column: 2 / span 8;   
+    padding-left: 0%;
+    padding-bottom: 10px;
+}
+
+.text{
+display: none;
+}
+
+.year{
+display: none;
+}
+
+.vorschau{
+    grid-column: 2 / span 8;
+    height: auto;
+    width: 100%;
+    justify-self: center;
+   padding-bottom: 50px;
+}
+
+.inhaltraster:hover > .vorschau{
+    width: 110%;
+    transition: all .1s ease;
+}
+
+.topnav{
+    display: none;
+}
+
+.icon{
+    display: block;
+}
+
+.mobilenav{
+    display: flex;
+}
+
+.DatImpAGB{
+    display: none;
+}
+}
